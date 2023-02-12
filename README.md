@@ -1,2 +1,3 @@
-# Quotes
-Цитатник
+# Цитатник
+
+Hазвание image в dockerhub: evgeniiiii/quotes

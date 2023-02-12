@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "ac759be4-6aa4-483a-81d4-da08f2e9c6a4",
+		"name": "Quotes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21436422"
+	},
+	"item": [
+		{
+			"name": "AddUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"bad\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/registration/add-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"registration",
+						"add-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddQuotes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"cfee96dd-4df1-44f7-a5a6-e75e80f8b3b4\",\r\n    \"quote\": \"не в деньгах счастье\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/quotes/add-quote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"quotes",
+						"add-quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetQuoteById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/quotes/get-quote-by-id?id=3c702198-9f22-4453-a55e-29830b76ab50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"quotes",
+						"get-quote-by-id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3c702198-9f22-4453-a55e-29830b76ab50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteQuoteById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/quotes/delete-quote-by-id?id=3c702198-9f22-4453-a55e-29830b76ab50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"quotes",
+						"delete-quote-by-id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3c702198-9f22-4453-a55e-29830b76ab50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FlopTen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/quotes/flop-ten",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"quotes",
+						"flop-ten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TopTen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/quotes/top-ten",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"quotes",
+						"top-ten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Last",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/quotes/last",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"quotes",
+						"last"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QuoteChangeById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"f10d2d06-d4c0-4b7f-9a8a-e4299bae06a5\",\r\n    \"userId\": \"ba2b9bec-785f-4851-a677-ca559df37b47\",\r\n    \"quote\": \"не в деньгах счастье3345456445654633333\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/quotes/quote-change-by-id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"quotes",
+						"quote-change-by-id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quoteId\": \"\",\r\n    \"userId\": \"\",\r\n    \"grade\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/vote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"vote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Statistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/statistics-quote-by-id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"statistics-quote-by-id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllQuotes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/quotes/get-all-quotes?page=0&size=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"quotes",
+						"get-all-quotes"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserByEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/user/get-by-email?email=bad@mail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"user",
+						"get-by-email"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "bad@mail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"bad@mail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/user/authorization",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"user",
+						"authorization"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
